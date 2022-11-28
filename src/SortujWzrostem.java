@@ -2,7 +2,6 @@ import java.util.Arrays;
 
 public class SortujWzrostem {
     public static String[] sortujWzrostem(int[] wzrost, String[] imiona){
-        String [] sortujWzrostem=new String[wzrost.length];
         for (int i = 0; i < imiona.length ; i++) {
             for (int j = 0; j < imiona.length-1; j++) {
                 if(wzrost[j]<wzrost[j+1]){
@@ -15,14 +14,12 @@ public class SortujWzrostem {
                 }
             }
         }
-        sortujWzrostem=imiona;
-
-        return sortujWzrostem;
+        return imiona;
     }
 
     public static void main(String[] args) {
-        String [] names = {"Alice","Bob","Bob"};
-        int [] heights = {155,185,150};
+        String [] names = {"Andrzej","Maciek","Maciek","Rzepson"};
+        int [] heights = {183,185,179,195};
         String[] posortowaneWzrostem= sortujWzrostem(heights,names);
         System.out.println(Arrays.toString(posortowaneWzrostem));
     }
